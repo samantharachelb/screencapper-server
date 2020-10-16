@@ -1,1 +1,5 @@
 *.json -linguist-detectable
+.eslintignore -linguist-detectable
+.eslint.js -linguist-detectable
+.babelrc -linguist-detectable
+tsconfig.json -linguist-detectable
