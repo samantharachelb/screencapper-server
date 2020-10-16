@@ -1,0 +1,68 @@
+{
+  "name": "screencapper-server",
+  "description": "server for screencapper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "samantha belnavis",
+    "email": "me@samantharachelb.ca",
+    "url": "https://github.com/samantharachelb"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/samantharachelb/screencapper-server.git"
+  },
+  "homepage": "https://github.com/samantharachelb/screencapper-server#readme",
+  "license": "AGPL-3.0",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "dev": "nodemon --exec babel-node --extensions '.ts'",
+    "build:clean": "rm -rf dist/ && mkdir dist/",
+    "build:app": "babel src --out-dir dist/ --extensions '.ts'",
+    "build": "npm run build:clean && npm run build:app",
+    "serve": "NODE_ENV=production node dist/"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.12.1",
+    "axios": "^0.20.0",
+    "colors": "^1.4.0",
+    "debug": "^4.2.0",
+    "fs": "0.0.1-security",
+    "fs-extra-promise": "^1.0.1",
+    "json-query": "^2.2.2",
+    "mathjs": "^7.5.1",
+    "moment": "^2.29.1",
+    "node-emoji": "^1.10.0",
+    "node-persist": "^3.1.0",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.0.3",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.1",
+    "@babel/node": "^7.12.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/plugin-transform-typescript": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "@types/fs-extra-promise": "^1.0.9",
+    "@types/node": "^14.11.8",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-static-fs": "^3.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "eslint": "^7.11.0",
+    "nodemon": "^2.0.5",
+    "ts-node": "^9.0.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.3"
+  },
+  "optionalDependencies": {
+    "dd-trace": "^0.26.1",
+    "hot-shots": "^8.2.0"
+  }
+}
